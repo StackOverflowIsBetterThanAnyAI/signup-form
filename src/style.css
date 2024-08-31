@@ -1,0 +1,313 @@
+@font-face {
+    font-family: norse-bold;
+    src: url(./assets/fonts/Norse-Bold.otf);
+}
+
+* {
+    border: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+        sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+*:focus-visible {
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
+    outline: #596d48 solid 4px !important;
+}
+
+@media only screen and (min-width: 768px) {
+    h1 {
+        font-size: 6rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        padding-bottom: 16px;
+    }
+
+    img {
+        height: 128px;
+    }
+
+    label,
+    input {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1.125rem;
+    }
+
+    .container {
+        padding-top: min(12svh, 128px);
+    }
+
+    .credits {
+        font-size: 1rem;
+        padding-bottom: 8px;
+    }
+
+    .formContainer {
+        padding: 32px clamp(16px, 8vw, 96px) 32px 32px;
+    }
+
+    .login {
+        padding: 8px clamp(16px, 12vw, 128px) 8px 32px;
+    }
+
+    .pContainer {
+        padding: 8px clamp(16px, 18vw, 288px) 8px 32px;
+    }
+
+    .submit {
+        margin: 32px clamp(16px, 12vw, 128px) 16px 32px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 6rem;
+    }
+
+    h2 {
+        font-size: 1.125rem;
+        padding-bottom: 12px;
+    }
+
+    img {
+        height: 128px;
+    }
+
+    label,
+    input {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 1.125rem;
+    }
+
+    .container {
+        padding-top: 32px;
+    }
+
+    .credits {
+        font-size: 0.875rem;
+        padding-bottom: 4px;
+    }
+
+    .formContainer {
+        padding: 32px 24px;
+    }
+
+    .login {
+        padding: 8px clamp(16px, 12vw, 128px) 8px 32px;
+    }
+
+    .pContainer {
+        padding: 8px clamp(16px, 18vw, 288px) 8px 32px;
+    }
+
+    .submit {
+        margin: 32px clamp(16px, 12vw, 128px) 16px 32px;
+    }
+}
+
+@media only screen and (max-width: 384px) {
+    h1 {
+        font-size: 5rem;
+    }
+
+    h2 {
+        font-size: 1.125rem;
+        padding-bottom: 12px;
+    }
+
+    img {
+        height: 96px;
+    }
+
+    label,
+    input {
+        font-size: 0.875rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .container {
+        padding-top: 16px;
+    }
+
+    .credits {
+        font-size: 0.875rem;
+        padding-bottom: 4px;
+    }
+
+    .formContainer {
+        padding: 24px;
+    }
+
+    .login {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        justify-content: center;
+        margin: 8px auto;
+        text-align: center;
+    }
+
+    .pContainer {
+        padding: 16px;
+    }
+
+    .submit {
+        display: flex;
+        justify-content: center;
+        margin: 24px auto 16px;
+    }
+}
+
+a {
+    color: #e6e6e6;
+}
+
+body {
+    background-color: #596d48;
+}
+
+h1 {
+    color: #e6e6e6;
+    font-family: norse-bold, sans-serif;
+}
+
+img {
+    object-fit: cover;
+}
+
+input {
+    background-color: #e6e6e6;
+    border-radius: 4px;
+    outline: #aba9a9 solid 2px;
+    padding: 2px 4px;
+}
+
+input:disabled {
+    background-color: #c4c4c4;
+    color: #787878;
+    cursor: not-allowed;
+}
+
+label {
+    text-transform: uppercase;
+}
+
+main {
+    background-color: #e6e6e6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    max-width: 1440px;
+    min-height: 100svh;
+}
+
+p {
+    font-weight: 700;
+}
+
+.container {
+    flex: 1 1 60%;
+}
+
+.credits {
+    color: #e6e6e6;
+    text-align: center;
+}
+
+.formContainer {
+    background-color: #f9f6f6;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.formInput {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 40%;
+}
+
+.formInputContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px clamp(32px, 4vw, 64px);
+}
+
+.image {
+    background-image: url(./assets/images/leaf.jpg),
+        linear-gradient(#2a5222, #596d48);
+    background-repeat: repeat-x;
+    flex: 1 1 40%;
+}
+
+.imageMaxHeight {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    height: min(1000px, 100%);
+    justify-content: space-between;
+}
+
+.login > a {
+    border-radius: 4px;
+    color: #596d48;
+    font-weight: 700;
+    padding: 0px 2px;
+    text-decoration: none;
+}
+
+.logo {
+    align-items: center;
+    background-color: rgba(38, 38, 38, 0.75);
+    box-shadow: inset 0px 0px 32px rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    padding: 16px 32px;
+}
+
+.paragraph {
+    padding: 16px 0px 32px;
+}
+
+.submit {
+    background-color: #596d48;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.35);
+    color: #f9f6f6;
+    font-weight: 500;
+    padding: 12px 48px;
+}
+
+.submit:not(:focus-visible) {
+    outline: none;
+}
+
+.submit:focus-visible {
+    outline: #aba9a9 solid 4px;
+}
+
+.submit:hover:not(:disabled) {
+    cursor: pointer;
+    background-color: #487e3d;
+}
+
+.submit:active:not(:disabled) {
+    background-color: #2a5222;
+}
+
+#error {
+    color: rgb(223, 8, 8);
+    visibility: hidden;
+}

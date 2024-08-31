@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Michael Münzenhofer" />
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="./src/assets/images/favicon.ico"
+        />
+        <link rel="stylesheet" href="./src/style.css" />
+        <title>Signup Form</title>
+    </head>
+    <body>
+        <main>
+            <div class="image">
+                <div class="imageMaxHeight">
+                    <div class="logo">
+                        <img
+                            src="./src/assets/images/odin.png"
+                            alt=""
+                            height="128px"
+                        />
+                        <h1>ODIN</h1>
+                    </div>
+                    <div class="credits">
+                        Photo by
+                        <a
+                            href="https://unsplash.com/de/@haliewestphoto"
+                            target="_blank"
+                            >Halie West</a
+                        >
+                        on
+                        <a
+                            href="https://unsplash.com/de/fotos/grune-blattpflanze-in-nahaufnahme-25xggax4bSA"
+                            target="_blank"
+                            >Unsplash</a
+                        >
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="pContainer">
+                    <p>
+                        This is not a real online service! You know you need
+                        something like this in your life to help you realize
+                        your deepest dreams.
+                    </p>
+                    <p>Sign up <i>now</i> to get started.</p>
+                    <p class="paragraph">You <i>know</i> you want to!</p>
+                </div>
+                <form action="/" method="post" autocomplete="on">
+                    <div class="formContainer">
+                        <h2>Let's do this!</h2>
+                        <div class="formInputContainer">
+                            <div class="formInput">
+                                <label for="firstName">First name</label
+                                ><input
+                                    id="firstName"
+                                    type="text"
+                                    autocomplete="name"
+                                    oninput="checkValidFirstName()"
+                                    onblur="checkValidForm()"
+                                />
+                            </div>
+                            <div class="formInput">
+                                <label for="lastName">Last name</label
+                                ><input
+                                    id="lastName"
+                                    type="text"
+                                    autocomplete="family-name"
+                                    oninput="checkValidLastName()"
+                                    onblur="checkValidForm()"
+                                />
+                            </div>
+                            <div class="formInput">
+                                <label for="email">Email</label>
+                                <input
+                                    id="email"
+                                    type="email"
+                                    autocomplete="email"
+                                    oninput="checkValidEmail()"
+                                    onblur="checkValidForm()"
+                                />
+                            </div>
+                            <div class="formInput">
+                                <label for="phone">Phone number</label>
+                                <input
+                                    id="phone"
+                                    type="tel"
+                                    autocomplete="tel"
+                                    oninput="checkValidTel()"
+                                    onblur="checkValidForm()"
+                                />
+                            </div>
+                            <div class="formInput">
+                                <label for="password">Password</label
+                                ><input
+                                    id="password"
+                                    type="password"
+                                    autocomplete="new-password"
+                                    oninput="checkValidPassword(); resetConfirmPassword()"
+                                    onblur="checkValidForm()"
+                                />
+                            </div>
+                            <div class="formInput">
+                                <label for="confirmPassword"
+                                    >Confirm Password</label
+                                ><input
+                                    id="confirmPassword"
+                                    type="password"
+                                    autocomplete="current-password"
+                                    oninput="checkValidConfirmPassword()"
+                                    onblur="checkValidForm()"
+                                    disabled
+                                    aria-disabled="true"
+                                />
+                            </div>
+                            <div id="error">* Passwords do not match.</div>
+                        </div>
+                    </div>
+                    <input
+                        id="submit"
+                        class="submit"
+                        type="button"
+                        value="Create Account"
+                        disabled
+                        aria-disabled="true"
+                    />
+                </form>
+                <div class="login">
+                    Already have an account? <a href="#">Log in</a>
+                </div>
+            </div>
+        </main>
+        <script src="./src/script.js"></script>
+    </body>
+</html>
